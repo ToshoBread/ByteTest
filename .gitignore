@@ -1,0 +1,13 @@
+# Folders
+/archives/
+/temp/
+
+# SCSS artifacts
+*.map
+index.css
+accountSettings.css
+
+# Test Files
+contentTesting.html
+testing.php
+database.php

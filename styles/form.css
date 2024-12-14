@@ -1,0 +1,111 @@
+body {
+  background-image: var(--formPageBackgroundImage);
+  background-size: cover;
+  backdrop-filter: blur(15px);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container {
+  background-color: var(--formBackgroundColor);
+  height: 100vh;
+  box-shadow: inset 0 0 1em 0.5em var(--shadowColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 3em;
+  gap: 1em;
+}
+
+form input {
+  font-size: 1.2rem;
+  border-radius: 1em;
+  padding: 1em;
+  border: none;
+  box-shadow: inset 0px 0px 0.1em 0.1em var(--shadowColor);
+  color: #666;
+}
+
+#genderWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  justify-content: space-evenly;
+  margin-left: 0.5em;
+}
+
+#genderWrapper label {
+  margin: 0 auto 0 0.5em;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  box-shadow: none;
+}
+
+form input[type="submit"] {
+  margin: auto;
+  padding: 0.8em 30%;
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 0.2em 0.2em var(--shadowColor);
+}
+
+#extraWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2em;
+  margin: -0.5em 1em 1em;
+}
+
+#extraWrapper a {
+  margin-left: auto;
+}
+
+#extraWrapper input[type="checkbox"] {
+  width: 1.5em;
+}
+
+#divideWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+#divideWrapper hr {
+  flex-grow: 1;
+  border: 1px inset black;
+  margin: auto;
+}
+
+#socialsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 1em;
+}
+
+.socials {
+  border: none;
+  filter: grayscale(100%);
+  transition: filter 200ms ease-in-out;
+}
+
+.socials:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+
+.socials img {
+  width: 2.3em;
+}

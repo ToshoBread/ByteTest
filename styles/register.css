@@ -1,0 +1,42 @@
+@media (max-width: 50em) {
+  #container {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 50.1em) {
+  #container {
+    height: 100%;
+    width: 50vw;
+    border-radius: 2em;
+    margin: auto;
+  }
+}
+
+.fa-arrow-circle-o-left {
+  background: none;
+  border: none;
+  align-self: flex-start;
+  margin-left: 4em;
+  color: black;
+  scale: 3;
+  transition: color 300ms ease-out;
+}
+
+.fa-arrow-circle-o-left:hover {
+  color: white;
+}
+
+#logo {
+  width: 5em;
+  margin: 0 auto 1em;
+}
+
+form {
+  margin: 1em 5em;
+}
+
+form input {
+  font-size: 1rem;
+}

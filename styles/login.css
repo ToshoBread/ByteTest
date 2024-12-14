@@ -1,0 +1,41 @@
+#container h1 {
+  font-size: 3rem;
+}
+
+#logo {
+  display: none;
+}
+
+/* Portrait */
+@media (max-width: 50em) {
+  #logoFull {
+    display: none;
+  }
+
+  #container {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+  }
+
+  #logo {
+    display: block;
+    width: 5em;
+    margin: 4em auto 1em;
+  }
+}
+
+/* Landscape */
+@media (min-width: 50.1em) {
+  #logoFull {
+    height: auto;
+    width: 40vw;
+    margin: auto;
+  }
+
+  #container {
+    height: 100vh;
+    width: 40vw;
+    border-radius: 2rem 0 0 2rem;
+  }
+}

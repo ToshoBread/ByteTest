@@ -1,0 +1,72 @@
+.indexMainWrapper {
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.innerCard {
+	display: grid;
+	gap: 1.5rem;
+	padding: 2rem !important;
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(7, auto);
+	grid-template-areas:
+		"picture user ."
+		"picture dates ."
+		"button . ."
+		"info . ."
+		"email fullName phone"
+		"org . ."
+		"skills exp .";
+
+	img {
+		grid-area: picture;
+	}
+
+	h1 {
+		grid-area: user;
+	}
+
+	button {
+		grid-area: button;
+	}
+
+	h2 {
+		grid-area: info;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+
+		&:first-of-type {
+			grid-area: dates;
+		}
+
+		&:nth-of-type(2) {
+			grid-area: email;
+		}
+
+		&:nth-of-type(3) {
+			grid-area: fullName;
+		}
+
+		&:nth-of-type(4) {
+			grid-area: org;
+		}
+
+		&:nth-of-type(5) {
+			grid-area: phone;
+		}
+
+		&:nth-of-type(6) {
+			grid-area: skills;
+		}
+
+		&:nth-of-type(7) {
+			grid-area: exp;
+		}
+	}
+}

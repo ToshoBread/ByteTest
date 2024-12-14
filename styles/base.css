@@ -1,0 +1,40 @@
+:root {
+	/* General purpose */
+	--shadowColor: rgba(0, 0, 0, 0.6);
+	--buttonColor: rgb(240, 240, 240);
+	--examButtonBackgroundColor: rgb(116, 116, 116);
+	--mainPageBackgroundColor: rgb(33, 33, 33);
+
+	/* Login and Registration page */
+	--formPageBackgroundImage: url("../imgs/background.png");
+	--formBackgroundColor: rgb(237, 237, 237);
+
+	/* Navigation component */
+	--topNavBackgroundColor: rgb(56, 91, 120);
+	--dropdownBackgroundColor: rgb(14, 38, 57);
+	--sidebarBackgroundColor: rgb(41, 41, 41);
+	--sidebarButtonHoverColor: rgb(62, 62, 62);
+
+	/* Card Component */
+	--outerCardBackgroundGradient: linear-gradient(
+		90deg,
+		rgba(39, 49, 61, 1) 0%,
+		rgba(104, 131, 163, 1) 100%
+	);
+	--innerCardBackgroundColor: rgba(17, 26, 44, 71);
+}
+
+/* Reset Attributes */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	background-color: var(--mainPageBackgroundColor);
+}

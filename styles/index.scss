@@ -6,7 +6,7 @@
 }
 
 .outerCard {
-	margin: 5% 15%;
+	margin: 5rem 15rem;
 	min-height: 30vh;
 	color: var(--buttonColor);
 	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadowColor);
@@ -31,9 +31,7 @@
 	gap: 0.5rem;
 	padding-top: 5vh;
 
-	select,
-	label,
-	button {
+	* {
 		padding: 0.5rem;
 		border: none;
 		border-radius: 1rem;
@@ -45,16 +43,6 @@
 
 	select {
 		font-size: 1.5em;
-		:after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			right: 10px;
-			width: 10px;
-			height: 10px;
-			background-image: linear-gradient(to bottom, #ccc, #aaa);
-			transform: translateY(-50%);
-		}
 	}
 
 	button {
@@ -65,7 +53,6 @@
 
 .descWrapper {
 	padding: 5%;
-	// text-shadow: 0 0.15rem 0.1rem var(--shadowColor);
 
 	p {
 		margin-top: 1rem;

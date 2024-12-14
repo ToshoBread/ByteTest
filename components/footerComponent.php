@@ -25,5 +25,5 @@
 	<a href="#">Privacy</a>
 	<a href="#">About</a>
 	<a href="#">Contact</a>
-	<a href="contentTesting.html">Testing</a>
+	<a href="../temp/contentTesting.html">Testing</a>
 </footer>

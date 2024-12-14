@@ -5,31 +5,47 @@
 	justify-content: space-between;
 }
 
-.innerCard {
+.accountDetails {
 	display: grid;
-	gap: 1.5rem;
+	row-gap: 1.5rem;
+	max-width: 100%;
 	padding: 2rem !important;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(7, auto);
+	overflow: hidden;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: repeat(7s, auto);
 	grid-template-areas:
-		"picture user ."
-		"picture dates ."
-		"button . ."
-		"info . ."
-		"email fullName phone"
-		"org . ."
-		"skills exp .";
+		"picture dates dates button"
+		"picture dates dates button"
+		". . . ."
+		"info info . ."
+		"email email fullName fullName"
+		"phone phone org org"
+		"skills skills exp exp";
+
+	font-size: 1em;
 
 	img {
 		grid-area: picture;
-	}
-
-	h1 {
-		grid-area: user;
+		justify-self: center;
+		border-radius: 100%;
+		width: 65%;
 	}
 
 	button {
 		grid-area: button;
+		cursor: pointer;
+		font-size: 1em;
+		color: var(--buttonColor);
+		background-color: var(--topNavBackgroundColor);
+		border: none;
+		border-radius: 1rem;
+		align-self: center;
+		padding: 0.5rem;
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background-color: var(--dropdownBackgroundColor);
+		}
 	}
 
 	h2 {
@@ -43,6 +59,7 @@
 
 		&:first-of-type {
 			grid-area: dates;
+			align-self: center;
 		}
 
 		&:nth-of-type(2) {
@@ -68,5 +85,26 @@
 		&:nth-of-type(7) {
 			grid-area: exp;
 		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.accountDetails {
+		padding: 0.5rem;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"picture"
+			"dates"
+			"button"
+			"info"
+			"email"
+			"fullName"
+			"phone"
+			"org"
+			"skills"
+			"exp";
+	}
+	.wrapper:first-of-type {
+		justify-self: center;
 	}
 }

@@ -53,10 +53,12 @@ $phoneNumber = "099230923";
 $skills = "Java, Python, PHP";
 $expLevel = "Intermediate";
 
+// TODO: Create editable details
 $settings_InnerCardContent = "
+	<div class=\"accountDetails\">
 		<img src=\"{$profilePicture}\" alt=\"User Profile Picture\" />
-		<h1>{$username}</h1>
 		<div class=\"wrapper\">
+			<h1>{$username}</h1>
 			<p>Member since:{$regDate}</p>
 			<p>Member since:{$lastSeen}</p>
 		</div>
@@ -86,6 +88,7 @@ $settings_InnerCardContent = "
 			<h4>Development Experience</h4>
 			<h3>{$expLevel}</h3>
 		</div>
+	</div>
 ";
 
 $settings_OuterCardContent = renderComponent(new InnerCardComponent($settings_InnerCardContent));

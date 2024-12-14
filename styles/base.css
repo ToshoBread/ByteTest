@@ -3,7 +3,7 @@
 	--shadowColor: rgba(0, 0, 0, 0.6);
 	--buttonColor: rgb(240, 240, 240);
 	--examButtonBackgroundColor: rgb(116, 116, 116);
-	--mainPageBackgroundColor: rgb(33, 33, 33);
+	--mainBackgroundColor: rgb(33, 33, 33);
 
 	/* Login and Registration page */
 	--formPageBackgroundImage: url("../imgs/background.png");
@@ -36,5 +36,5 @@ html,
 body {
 	height: 100%;
 	width: 100%;
-	background-color: var(--mainPageBackgroundColor);
+	background-color: var(--mainBackgroundColor);
 }

@@ -1,5 +1,5 @@
 :root {
-	/* General purpose */
+	/* General Purpose */
 	--shadowColor: rgba(0, 0, 0, 0.6);
 	--buttonColor: rgb(240, 240, 240);
 	--examButtonBackgroundColor: rgb(116, 116, 116);
@@ -8,6 +8,12 @@
 	/* Login and Registration page */
 	--formPageBackgroundImage: url("../imgs/background.png");
 	--formBackgroundColor: rgb(237, 237, 237);
+
+	/* Account Settings Page */
+	--settingsSaveButtonColor: rgb(20, 90, 20);
+	--settingsSaveButtonHoverColor: rgb(8, 54, 8);
+	--settingsCancelButtonColor: rgb(130, 23, 23);
+	--settingsCancelButtonHoverColor: rgb(72, 7, 7);
 
 	/* Navigation component */
 	--topNavBackgroundColor: rgb(56, 91, 120);

@@ -123,7 +123,6 @@
 
 		nav i,
 		.dropdownContent i {
-			padding-right: 5%;
 			scale: 2;
 		}
 

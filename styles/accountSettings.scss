@@ -1,11 +1,31 @@
-.accountDetails {
+.viewMode,
+.editMode {
 	display: grid;
 	row-gap: 1.5rem;
+	column-gap: 1rem;
 	max-width: 100%;
 	padding: 2rem !important;
 	overflow: hidden;
-	grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-	grid-template-rows: repeat(7, auto);
+	font-size: 1em;
+
+	button {
+		cursor: pointer;
+		font-size: 1em;
+		color: var(--buttonColor);
+		border: none;
+		border-radius: 1rem;
+		align-self: center;
+		padding: 0.5rem;
+		transition: background-color 0.2s ease;
+	}
+
+	h2 {
+		grid-area: info;
+	}
+}
+
+.viewMode {
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
 		"picture dates dates button"
 		"picture dates dates button"
@@ -14,77 +34,161 @@
 		"email email fullName fullName"
 		"phone phone org org"
 		"skills skills exp exp";
+}
 
-	font-size: 1em;
+.editMode {
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-areas:
+		"picture dates dates . save cancel"
+		"picture dates dates . save cancel"
+		". . . . . ."
+		"info info . . . ."
+		"email email firstName firstName lastName lastName"
+		"phone phone org org . ."
+		"skills skills skills exp exp exp";
 
-	img {
-		grid-area: picture;
-		justify-self: center;
-		border-radius: 100%;
-		width: 65%;
-	}
-
-	button {
-		grid-area: button;
-		cursor: pointer;
-		font-size: 1em;
-		color: var(--buttonColor);
-		background-color: var(--topNavBackgroundColor);
+	input {
+		font-size: 1.2em;
+		padding: 0.2rem 1rem;
+		margin-right: 1rem;
+		border-radius: 5rem;
 		border: none;
-		border-radius: 1rem;
-		align-self: center;
-		padding: 0.5rem;
-		transition: background-color 0.2s ease;
-
-		&:hover {
-			background-color: var(--dropdownBackgroundColor);
-		}
-	}
-
-	h2 {
-		grid-area: info;
-	}
-
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 0.3rem;
-
-		&:first-of-type {
-			grid-area: dates;
-			align-self: center;
-		}
-
-		&:nth-of-type(2) {
-			grid-area: email;
-		}
-
-		&:nth-of-type(3) {
-			grid-area: fullName;
-		}
-
-		&:nth-of-type(4) {
-			grid-area: org;
-		}
-
-		&:nth-of-type(5) {
-			grid-area: phone;
-		}
-
-		&:nth-of-type(6) {
-			grid-area: skills;
-		}
-
-		&:nth-of-type(7) {
-			grid-area: exp;
-		}
 	}
 }
 
+.picMask {
+	grid-area: picture;
+	position: relative;
+	justify-self: center;
+	border-radius: 50%;
+	height: 10rem;
+	width: 10rem;
+	overflow: hidden;
+	background-color: var(--mainBackgroundColor);
+	box-shadow: inset 0 0.5rem 0.5rem 0.5rem var(--shadowColor);
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&:hover .picOverlay {
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+}
+
+.picOverlay {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	transition: background-color 0.3s ease;
+}
+
+.hidden {
+	display: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+}
+
+.user {
+	grid-area: dates;
+	align-self: center;
+
+	:first-child {
+		margin-bottom: 0.5rem;
+	}
+
+	input {
+		margin: 0;
+	}
+}
+
+.editBtn {
+	grid-area: button;
+	background-color: var(--topNavBackgroundColor);
+
+	&:hover {
+		background-color: var(--dropdownBackgroundColor);
+	}
+}
+
+.save {
+	grid-area: save;
+	background-color: var(--settingsSaveButtonColor);
+
+	&:hover {
+		background-color: var(--settingsSaveButtonHoverColor);
+	}
+}
+
+.cancel {
+	grid-area: cancel;
+	background-color: var(--settingsCancelButtonColor);
+
+	&:hover {
+		background-color: var(--settingsCancelButtonHoverColor);
+	}
+}
+
+.email {
+	grid-area: email;
+}
+
+.fullName {
+	grid-area: fullName;
+}
+
+.firstName {
+	grid-area: firstName;
+}
+
+.lastName {
+	grid-area: lastName;
+}
+
+.phone {
+	grid-area: phone;
+}
+
+.org {
+	grid-area: org;
+}
+
+.skills {
+	grid-area: skills;
+}
+
+.expLevel {
+	grid-area: exp;
+}
+
 @media only screen and (max-width: 768px) {
-	.accountDetails {
-		padding: 0.5rem;
+	.user {
+		justify-self: center;
+		align-items: center;
+	}
+
+	.viewMode,
+	.editMode {
 		grid-template-columns: 1fr;
+	}
+
+	.viewMode {
 		grid-template-areas:
 			"picture"
 			"dates"
@@ -97,7 +201,20 @@
 			"skills"
 			"exp";
 	}
-	.wrapper:first-of-type {
-		justify-self: center;
+
+	.editMode {
+		grid-template-areas:
+			"picture"
+			"dates"
+			"save"
+			"cancel"
+			"info"
+			"email"
+			"firstName"
+			"lastName"
+			"phone"
+			"org"
+			"skills"
+			"exp";
 	}
 }

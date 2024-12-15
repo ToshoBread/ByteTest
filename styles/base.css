@@ -38,3 +38,10 @@ body {
 	width: 100%;
 	background-color: var(--mainBackgroundColor);
 }
+
+.indexMainWrapper {
+	min-height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

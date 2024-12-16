@@ -92,20 +92,20 @@ nav {
 		&:hover {
 			background-color: var(--sidebarButtonHoverColor);
 		}
+	}
 
-		i {
-			padding-right: 10%;
-			scale: 1.5;
-		}
+	i {
+		padding-right: 10%;
+		scale: 1.5;
+	}
 
-		hr {
-			margin: 0 5%;
-		}
+	hr {
+		margin: 0 5%;
+	}
 
-		img {
-			width: 75%;
-			margin: 10% 12%;
-		}
+	img {
+		width: 75%;
+		margin: 10% 12%;
 	}
 }
 
@@ -114,19 +114,19 @@ nav {
 		width: 100%;
 	}
 
-	nav a,
-	.dropdownContent a {
-		text-align: center;
-		padding: 5%;
-	}
+	nav,
+	.dropdownContent {
+		a {
+			text-align: center;
+			padding: 5%;
+		}
 
-	nav i,
-	.dropdownContent i {
-		scale: 2;
-	}
+		i {
+			scale: 2;
+		}
 
-	nav hr,
-	.dropdownContent hr {
-		margin: 0 3%;
+		hr {
+			margin: 0 3%;
+		}
 	}
 }

@@ -24,7 +24,7 @@ require "../src/settings_cardContent.php";
         <?php echo renderComponent(new FooterComponent); ?>
     </div>
 </body>
-<script src="../scripts/main.js"></script>
+<script src="../scripts/settings.js"></script>
 <script src="https://kit.fontawesome.com/1186408caf.js" crossorigin="anonymous"></script>
 
 </html>

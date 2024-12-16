@@ -1,6 +1,6 @@
 <?php
 require "../components/components.php";
-require "cardContent.php";
+require "../src/settings_cardContent.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,6 @@ require "cardContent.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/base.css?version=<?php echo time(); ?>" />
     <link rel="stylesheet" href="../styles/accountSettings.css?version=<?php echo time(); ?>" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <link rel="icon" type="image/png" href="../imgs/byteTestLogoWhiteMin.png" />
     <title>ByteTest</title>
 </head>

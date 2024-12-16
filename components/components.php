@@ -1,6 +1,5 @@
 <?php
-// Import this file by inserting code below:
-// require "../components/components.php"
+// Import with: require "../components/components.php"
 
 function renderComponent($component)
 {
@@ -12,7 +11,7 @@ class NavigationComponent
     function render()
     {
         ob_start();
-        require "../components/navigationComponent.php";
+        require "navigationComponent.html";
         return ob_get_clean();
     }
 }
@@ -29,7 +28,7 @@ class OuterCardComponent
     {
         ob_start();
         extract(["outerCardContent" => $this->content]);
-        require "../components/outerCardComponent.php";
+        require "outerCardComponent.html";
         return ob_get_clean();
     }
 }
@@ -47,7 +46,7 @@ class InnerCardComponent
     {
         ob_start();
         extract(["innerCardContent" => $this->content]);
-        require "../components/innerCardComponent.php";
+        require "innerCardComponent.html";
         return ob_get_clean();
     }
 }
@@ -57,7 +56,7 @@ class FooterComponent
     function render()
     {
         ob_start();
-        require "../components/footerComponent.php";
+        require "footerComponent.html";
         return ob_get_clean();
     }
 }

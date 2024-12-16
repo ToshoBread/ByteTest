@@ -1,5 +1,4 @@
 <?php
-// $profilePicture = "http://placehold.it/150x150";
 $profilePicture = "../imgs/byteTestLogoWhite.png";
 $username = "Placeholder";
 $regDate = date("M Y");
@@ -7,7 +6,7 @@ $lastSeen = date("m-d-Y");
 $email = "placeholder@email.com";
 $firstName = "Hello";
 $lastName = "World";
-$fullName = $firstName . $lastName;
+$fullName = $firstName . " " . $lastName;
 $org = "None";
 $phone = "099230923";
 $skills = "Java, Python, PHP";
@@ -57,7 +56,7 @@ $settings_OuterCardContent = renderComponent(new InnerCardComponent("
 			<div class='picOverlay'>Change Photo</div>
 		</div>
 		<div class='wrapper user'>
-			<input type='text' class='username' placeholder='{$username}' />
+			<input type='text' id='username' class='username' placeholder='{$username}' />
 			<p>Member since: {$regDate}</p>
 			<p>Last seen: {$lastSeen}</p>
 		</div>
@@ -66,27 +65,27 @@ $settings_OuterCardContent = renderComponent(new InnerCardComponent("
 		<h2>Information</h2>
 		<div class='wrapper email'>
 			<h4><label for='email'>Email</label></h4>
-			<input type='email' name='email' class='email' placeholder='{$email}' />
+			<input type='email' name='email' id='email' class='email' placeholder='{$email}' />
 		</div>
 		<div class='wrapper firstName'>
 			<h4><label for='firstName'>First Name</label></h4>
-			<input type='text' name='firstName' class='firstName' placeholder='{$firstName}' />
+			<input type='text' name='firstName' id='firstName' class='firstName' placeholder='{$firstName}' />
 		</div>
 		<div class='wrapper lastName'>
 			<h4><label for='lastName'>Last Name</label></h4>
-			<input type='text' name='lastName' class='lastName' placeholder='{$lastName}' />
+			<input type='text' name='lastName' id='lastName' class='lastName' placeholder='{$lastName}' />
 		</div>
 		<div class='wrapper phone'>
 			<h4><label for='phone'>Phone Number</label></h4>
-			<input type='tel' name='phone' class='phone' placeholder='{$phone}' />
+			<input type='tel' name='phone' id='phone' class='phone' placeholder='{$phone}' />
 		</div>
 		<div class='wrapper org'>
 			<h4><label for='org'>Organization</label></h4>
-			<input type='text' name='org' class='org' placeholder='{$org}' />
+			<input type='text' name='org' id='org' class='org' placeholder='{$org}' />
 		</div>
 		<div class='wrapper skills'>
 			<h4><label for='skills'>Skills (Comma separated)</label></h4>
-			<input type='text' name='skills' class='skills' placeholder='{$skills}' />
+			<input type='text' name='skills' id='skills' class='skills' placeholder='{$skills}' />
 		</div>
 		<div class='wrapper expLevel'>
 			<h4>Development Experience:</h4>

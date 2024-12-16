@@ -1,0 +1,132 @@
+header {
+	height: 10%;
+	width: 100%;
+	background: var(--topNavBackgroundColor);
+	box-shadow: 0 0 1rem 0.1rem var(--shadowColor);
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	z-index: 1;
+
+	.btn {
+		background: transparent;
+		border: none;
+		color: var(--buttonColor);
+		scale: 2;
+		margin: 0 2rem;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.fa {
+		scale: 0.5;
+	}
+
+	.sidebarBtn {
+		margin-right: auto;
+	}
+}
+
+.dropdownBtnWrapper {
+	height: 100%;
+	overflow: hidden;
+
+	.dropdownBtn {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.dropdownContent {
+	display: none;
+	position: absolute;
+	width: 15rem;
+	right: 0;
+	z-index: 1;
+	background-color: var(--dropdownBackgroundColor);
+	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadowColor);
+
+	a {
+		display: block;
+		color: var(--buttonColor);
+		text-align: center;
+		padding: 10%;
+		transition: background-color 0.15s ease-in;
+
+		&:hover {
+			background-color: var(--topNavBackgroundColor);
+		}
+	}
+
+	i {
+		float: left;
+	}
+
+	hr {
+		margin: 0 5%;
+	}
+}
+
+nav {
+	height: 90vh;
+	width: 0%;
+	position: fixed;
+	z-index: 1;
+	top: 10vh;
+	left: 0;
+	background-color: var(--sidebarBackgroundColor);
+	overflow-x: hidden;
+	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadowColor);
+
+	a {
+		display: block;
+		color: var(--buttonColor);
+		padding: 10%;
+		transition: background-color 0.15s ease-in;
+
+		&:hover {
+			background-color: var(--sidebarButtonHoverColor);
+		}
+
+		i {
+			padding-right: 10%;
+			scale: 1.5;
+		}
+
+		hr {
+			margin: 0 5%;
+		}
+
+		img {
+			width: 75%;
+			margin: 10% 12%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.dropdownContent {
+		width: 100%;
+	}
+
+	nav a,
+	.dropdownContent a {
+		text-align: center;
+		padding: 5%;
+	}
+
+	nav i,
+	.dropdownContent i {
+		scale: 2;
+	}
+
+	nav hr,
+	.dropdownContent hr {
+		margin: 0 3%;
+	}
+}

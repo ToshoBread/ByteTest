@@ -4,10 +4,9 @@
 
 # SCSS artifacts
 *.map
+navigation.css
 index.css
 accountSettings.css
 
 # Test Files
-contentTesting.html
-testing.php
 database.php

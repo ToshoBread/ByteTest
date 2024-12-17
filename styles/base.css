@@ -1,7 +1,7 @@
-/*! Global Variables  */
 :root {
+	/*! Global Variables  */
+
 	/** General Purpose-------------------------  */
-	--shadow-color: rgba(0, 0, 0, 0.6);
 	--main-bg: rgb(33, 33, 33);
 
 	/** Login & Registration Pages------------------------- */
@@ -39,6 +39,18 @@
 	/** Footer Component------------------------- */
 	--footer-txt-color: rgb(240, 240, 240);
 	--footer-btn-hover: rgb(62, 62, 62);
+
+	/*! Font Sizes */
+	/* viewport: 400px -> 1024px*/
+	--font-s: clamp(0.8rem, 0.672rem + 0.513vw, 1rem);
+	--font-m: clamp(1rem, 0.679rem + 1.282vw, 1.5rem);
+	--font-l: clamp(1.3rem, 0.979rem + 1.282vw, 1.8rem);
+	--font-xl: clamp(1.5rem, 1.179rem + 1.282vw, 2rem);
+
+	/*? Shadows  */
+	--shadow-color: rgba(0, 0, 0, 0.6);
+	--shadow-small: 0 0.5rem 1rem 0.1rem var(--shadow-color);
+	--shadow-large: 0 0.5rem 1.5rem 0.5rem var(--shadow-color);
 }
 
 /** Reset Properties------------------------- */

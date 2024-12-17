@@ -1,10 +1,11 @@
 # Folders
-/archives/
-/temp/
+/.vscode/
+/testing/
 
 # SCSS artifacts
 *.map
 home.css
+profile.css
 settings.css
 navigation.css
 

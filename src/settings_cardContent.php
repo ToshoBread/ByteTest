@@ -1,6 +1,6 @@
 <?php
 $profilePicture = "../imgs/byteTestLogoWhite.png";
-$username = "Placeholder";
+$username = "HelloWorld";
 $regDate = date("M Y");
 $lastSeen = date("m-d-Y");
 $email = "placeholder@email.com";

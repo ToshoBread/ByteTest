@@ -2,7 +2,7 @@ header {
 	height: 10%;
 	width: 100%;
 	background: var(--topnav-bg);
-	box-shadow: 0 0 1rem 0.1rem var(--shadow-color);
+	box-shadow: var(--shadow-small);
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -49,13 +49,13 @@ header {
 	right: 0;
 	z-index: 1;
 	background-color: var(--dropdown-bg);
-	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadow-color);
+	box-shadow: var(--shadow-small);
 
 	a {
 		display: block;
-		color: var(--nav-txt-color);
 		text-align: center;
 		padding: 10%;
+		color: var(--nav-txt-color);
 		transition: background-color 0.15s ease-in;
 
 		&:hover {
@@ -79,9 +79,10 @@ header {
 	z-index: 1;
 	top: 10vh;
 	left: 0;
+	font-size: var(--font-s);
 	background-color: var(--sidebar-bg);
 	overflow-x: hidden;
-	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadow-color);
+	box-shadow: var(--shadow-small);
 	transition: width 0.2s ease-in-out;
 
 	a {
@@ -110,13 +111,15 @@ header {
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (width <= 768px) {
 	.dropdown-content {
 		width: 100%;
 	}
 
-	nav,
+	.sidebar,
 	.dropdown-content {
+		font-size: var(--font-m);
+
 		a {
 			text-align: center;
 			padding: 5%;

@@ -2,10 +2,10 @@
 	.outer-card {
 		padding: 0.5rem;
 		margin: 5% 10%;
-		min-height: 30vh;
+		min-height: 30%;
 		color: var(--card-txt-color);
 		background: var(--outer-card-bg);
-		box-shadow: 0 0.5rem 1rem 0.1rem var(--shadow-color);
+		box-shadow: var(--shadow-large);
 	}
 </style>
 

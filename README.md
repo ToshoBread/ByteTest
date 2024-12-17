@@ -3,7 +3,7 @@
 Online Examination Website for IT Elective Course
 
 Submitted to:
-Prof. Teresita C. Alcantara
+CICS Faculty
 
 Developed by:
 Zion Nathan Dionisio

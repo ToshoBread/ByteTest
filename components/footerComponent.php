@@ -10,6 +10,7 @@
 
 	footer a,
 	footer p {
+		font-size: var(--font-s);
 		color: var(--footer-txt-color);
 		transition: color 0.15s ease-in;
 	}
@@ -20,11 +21,9 @@
 </style>
 <footer>
 	<p>
-		<strong
-			>&copy;
+		<strong>&copy;
 			<?php echo date("Y") ?>
-			ByteTest</strong
-		>
+			ByteTest</strong>
 	</p>
 	<a href="#">Terms</a>
 	<a href="#">Privacy</a>

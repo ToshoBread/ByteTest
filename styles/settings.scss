@@ -1,5 +1,5 @@
-.viewMode,
-.editMode {
+.view-mode,
+.edit-mode {
 	display: grid;
 	row-gap: 1.5rem;
 	column-gap: 1rem;
@@ -11,7 +11,7 @@
 	button {
 		cursor: pointer;
 		font-size: 1em;
-		color: var(--buttonColor);
+		color: var(--card-txt-color);
 		border: none;
 		border-radius: 1rem;
 		align-self: center;
@@ -22,28 +22,50 @@
 	h2 {
 		grid-area: info;
 	}
+
+	.pic-mask {
+		grid-area: picture;
+		position: relative;
+		justify-self: center;
+		border-radius: 50%;
+		height: 10rem;
+		width: 10rem;
+		overflow: hidden;
+		background-color: var(--main-bg);
+		box-shadow: inset 0 0.5rem 0.5rem 0.5rem var(--shadow-color);
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&:hover .pic-overlay {
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+	}
 }
 
-.viewMode {
+.view-mode {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
 		"picture dates dates button"
 		"picture dates dates button"
 		". . . ."
 		"info info . ."
-		"email email fullName fullName"
+		"email email full-name full-name"
 		"phone phone org org"
 		"skills skills exp exp";
 }
 
-.editMode {
+.edit-mode {
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-areas:
 		"picture dates dates . save cancel"
 		"picture dates dates . save cancel"
 		". . . . . ."
 		"info info . . . ."
-		"email email firstName firstName lastName lastName"
+		"email email first-name first-name last-name last-name"
 		"phone phone org org . ."
 		"skills skills skills exp exp exp";
 
@@ -54,45 +76,23 @@
 		border-radius: 5rem;
 		border: none;
 	}
-}
 
-.picMask {
-	grid-area: picture;
-	position: relative;
-	justify-self: center;
-	border-radius: 50%;
-	height: 10rem;
-	width: 10rem;
-	overflow: hidden;
-	background-color: var(--mainBackgroundColor);
-	box-shadow: inset 0 0.5rem 0.5rem 0.5rem var(--shadowColor);
-
-	img {
-		height: 100%;
+	.pic-overlay {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
 		width: 100%;
-		object-fit: cover;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: white;
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+		transition: background-color 0.3s ease;
 	}
-
-	&:hover .picOverlay {
-		background-color: rgba(0, 0, 0, 0.75);
-	}
-}
-
-.picOverlay {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: white;
-	font-size: 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	opacity: 1;
-	transition: background-color 0.3s ease;
 }
 
 .hidden {
@@ -118,30 +118,30 @@
 	}
 }
 
-.editBtn {
+.edit-btn {
 	grid-area: button;
-	background-color: var(--topNavBackgroundColor);
+	background-color: var(--settings-edit-btn);
 
 	&:hover {
-		background-color: var(--dropdownBackgroundColor);
+		background-color: var(--settings-edit-hover);
 	}
 }
 
-.save {
+.save-btn {
 	grid-area: save;
-	background-color: var(--settingsSaveButtonColor);
+	background-color: var(--settings-save-btn);
 
 	&:hover {
-		background-color: var(--settingsSaveButtonHoverColor);
+		background-color: var(--settings-save-hover);
 	}
 }
 
-.cancel {
+.cancel-btn {
 	grid-area: cancel;
-	background-color: var(--settingsCancelButtonColor);
+	background-color: var(--settings-cancel-btn);
 
 	&:hover {
-		background-color: var(--settingsCancelButtonHoverColor);
+		background-color: var(--settings-cancel-hover);
 	}
 }
 
@@ -149,16 +149,16 @@
 	grid-area: email;
 }
 
-.fullName {
-	grid-area: fullName;
+.full-name {
+	grid-area: full-name;
 }
 
-.firstName {
-	grid-area: firstName;
+.first-name {
+	grid-area: first-name;
 }
 
-.lastName {
-	grid-area: lastName;
+.last-name {
+	grid-area: last-name;
 }
 
 .phone {
@@ -173,7 +173,7 @@
 	grid-area: skills;
 }
 
-.expLevel {
+.exp-level {
 	grid-area: exp;
 }
 
@@ -183,26 +183,26 @@
 		align-items: center;
 	}
 
-	.viewMode,
-	.editMode {
+	.view-mode,
+	.edit-mode {
 		grid-template-columns: 1fr;
 	}
 
-	.viewMode {
+	.view-mode {
 		grid-template-areas:
 			"picture"
 			"dates"
 			"button"
 			"info"
 			"email"
-			"fullName"
+			"full-name"
 			"phone"
 			"org"
 			"skills"
 			"exp";
 	}
 
-	.editMode {
+	.edit-mode {
 		grid-template-areas:
 			"picture"
 			"dates"
@@ -210,8 +210,8 @@
 			"cancel"
 			"info"
 			"email"
-			"firstName"
-			"lastName"
+			"first-name"
+			"last-name"
 			"phone"
 			"org"
 			"skills"

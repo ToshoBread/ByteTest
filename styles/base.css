@@ -1,36 +1,47 @@
+/*! Global Variables  */
 :root {
-	/* General Purpose */
-	--shadowColor: rgba(0, 0, 0, 0.6);
-	--buttonColor: rgb(240, 240, 240);
-	--examButtonBackgroundColor: rgb(116, 116, 116);
-	--mainBackgroundColor: rgb(33, 33, 33);
+	/** General Purpose-------------------------  */
+	--shadow-color: rgba(0, 0, 0, 0.6);
+	--main-bg: rgb(33, 33, 33);
 
-	/* Login and Registration page */
-	--formPageBackgroundImage: url("../imgs/background.png");
-	--formBackgroundColor: rgb(237, 237, 237);
+	/** Login & Registration Pages------------------------- */
+	--form-bg-img: url("../imgs/background.png");
+	--form-bg: rgb(237, 237, 237);
 
-	/* Account Settings Page */
-	--settingsSaveButtonColor: rgb(20, 90, 20);
-	--settingsSaveButtonHoverColor: rgb(8, 54, 8);
-	--settingsCancelButtonColor: rgb(130, 23, 23);
-	--settingsCancelButtonHoverColor: rgb(72, 7, 7);
+	/** Home & Practice Pages------------------------- */
+	--exam-btn-bg: rgb(116, 116, 116);
+	--exam-btn-hover: rgb(77, 77, 77);
 
-	/* Navigation component */
-	--topNavBackgroundColor: rgb(56, 91, 120);
-	--dropdownBackgroundColor: rgb(14, 38, 57);
-	--sidebarBackgroundColor: rgb(41, 41, 41);
-	--sidebarButtonHoverColor: rgb(62, 62, 62);
+	/** Account Settings Page------------------------- */
+	--settings-edit-btn: rgb(56, 91, 120);
+	--settings-edit-hover: rgb(14, 38, 57);
+	--settings-save-btn: rgb(20, 90, 20);
+	--settings-save-hover: rgb(8, 54, 8);
+	--settings-cancel-btn: rgb(130, 23, 23);
+	--settings-cancel-hover: rgb(72, 7, 7);
 
-	/* Card Component */
-	--outerCardBackgroundGradient: linear-gradient(
+	/** Navigation Component------------------------- */
+	--topnav-bg: rgb(56, 91, 120);
+	--nav-txt-color: rgb(240, 240, 240);
+	--dropdown-bg: rgb(14, 38, 57);
+	--sidebar-bg: rgb(41, 41, 41);
+	--sidebar-btn-hover: rgb(62, 62, 62);
+
+	/** Card Component------------------------- */
+	--outer-card-bg: linear-gradient(
 		90deg,
 		rgba(39, 49, 61, 1) 0%,
 		rgba(104, 131, 163, 1) 100%
 	);
-	--innerCardBackgroundColor: rgba(17, 26, 44, 71);
+	--inner-card-bg: rgba(17, 26, 44, 71);
+	--card-txt-color: rgb(240, 240, 240);
+
+	/** Footer Component------------------------- */
+	--footer-txt-color: rgb(240, 240, 240);
+	--footer-btn-hover: rgb(62, 62, 62);
 }
 
-/* Reset Attributes */
+/** Reset Properties------------------------- */
 * {
 	margin: 0;
 	padding: 0;
@@ -38,15 +49,16 @@
 	text-decoration: none;
 }
 
+/** Document Defaults------------------------- */
 html,
 body {
 	height: 100%;
 	width: 100%;
-	background-color: var(--mainBackgroundColor);
+	background-color: var(--main-bg);
 }
 
-.indexMainWrapper {
-	min-height: 90vh;
+.main-wrapper {
+	min-height: 85vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

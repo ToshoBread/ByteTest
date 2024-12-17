@@ -1,9 +1,9 @@
-const dropdownButton = document.querySelector(".dropdownBtn");
-const dropdownContent = document.querySelector(".dropdownContent");
+const dropdownButton = document.querySelector(".dropdown-btn");
+const dropdownContent = document.querySelector(".dropdown-content");
 const caret = document.querySelector(".fa");
 dropdownContent.style.display = "none";
 
-const sidebarButton = document.querySelector(".sidebarBtn");
+const sidebarButton = document.querySelector(".sidebar-btn");
 const sidebar = document.querySelector(".sidebar");
 const menuIcon = sidebarButton.querySelector("i");
 
@@ -30,8 +30,8 @@ function toggleDropdown() {
 function closeIfClickedOutside(event) {
 	if (dropdownContent.style.display === "none") return;
 	if (
-		!event.target.matches(".dropdownBtn") &&
-		!event.target.closest(".dropdownBtnWrapper")
+		!event.target.matches(".dropdown-btn") &&
+		!event.target.closest(".dropdown-btn-wrapper")
 	) {
 		dropdownContent.style.display = "none";
 	}

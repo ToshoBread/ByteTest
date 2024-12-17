@@ -11,7 +11,7 @@ class NavigationComponent
     function render()
     {
         ob_start();
-        require "navigationComponent.html";
+        require "navigationComponent.php";
         return ob_get_clean();
     }
 }
@@ -28,7 +28,7 @@ class OuterCardComponent
     {
         ob_start();
         extract(["outerCardContent" => $this->content]);
-        require "outerCardComponent.html";
+        require "outerCardComponent.php";
         return ob_get_clean();
     }
 }
@@ -46,7 +46,7 @@ class InnerCardComponent
     {
         ob_start();
         extract(["innerCardContent" => $this->content]);
-        require "innerCardComponent.html";
+        require "innerCardComponent.php";
         return ob_get_clean();
     }
 }
@@ -56,7 +56,7 @@ class FooterComponent
     function render()
     {
         ob_start();
-        require "footerComponent.html";
+        require "footerComponent.php";
         return ob_get_clean();
     }
 }

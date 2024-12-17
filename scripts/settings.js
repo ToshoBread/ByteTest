@@ -1,8 +1,8 @@
-let viewMode = document.querySelector(".viewMode");
-let editMode = document.querySelector(".editMode");
-let editButton = document.querySelector(".editBtn");
-let saveButton = document.querySelector(".save");
-let cancelButton = document.querySelector(".cancel");
+let viewMode = document.querySelector(".view-mode");
+let editMode = document.querySelector(".edit-mode");
+let editButton = document.querySelector(".edit-btn");
+let saveButton = document.querySelector(".save-btn");
+let cancelButton = document.querySelector(".cancel-btn");
 
 editButton.addEventListener("click", toggleHidden);
 saveButton.addEventListener("click", toggleHidden);

@@ -4,9 +4,9 @@
 
 # SCSS artifacts
 *.map
+home.css
+settings.css
 navigation.css
-index.css
-accountSettings.css
 
 # Test Files
 database.php

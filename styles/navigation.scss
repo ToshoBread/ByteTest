@@ -1,8 +1,8 @@
 header {
 	height: 10%;
 	width: 100%;
-	background: var(--topNavBackgroundColor);
-	box-shadow: 0 0 1rem 0.1rem var(--shadowColor);
+	background: var(--topnav-bg);
+	box-shadow: 0 0 1rem 0.1rem var(--shadow-color);
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -13,7 +13,7 @@ header {
 	.btn {
 		background: transparent;
 		border: none;
-		color: var(--buttonColor);
+		color: var(--nav-txt-color);
 		scale: 2;
 		margin: 0 2rem;
 
@@ -26,40 +26,40 @@ header {
 		scale: 0.5;
 	}
 
-	.sidebarBtn {
+	.sidebar-btn {
 		margin-right: auto;
 	}
 }
 
-.dropdownBtnWrapper {
+.dropdown-btn-wrapper {
 	height: 100%;
 	overflow: hidden;
 
-	.dropdownBtn {
+	.dropdown-btn {
 		display: flex;
 		align-items: center;
 		height: 100%;
 	}
 }
 
-.dropdownContent {
-	display: none;
+.dropdown-content {
+	display: block;
 	position: absolute;
 	width: 15rem;
 	right: 0;
 	z-index: 1;
-	background-color: var(--dropdownBackgroundColor);
-	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadowColor);
+	background-color: var(--dropdown-bg);
+	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadow-color);
 
 	a {
 		display: block;
-		color: var(--buttonColor);
+		color: var(--nav-txt-color);
 		text-align: center;
 		padding: 10%;
 		transition: background-color 0.15s ease-in;
 
 		&:hover {
-			background-color: var(--topNavBackgroundColor);
+			background-color: var(--topnav-bg);
 		}
 	}
 
@@ -72,25 +72,26 @@ header {
 	}
 }
 
-nav {
+.sidebar {
 	height: 90vh;
 	width: 0%;
 	position: fixed;
 	z-index: 1;
 	top: 10vh;
 	left: 0;
-	background-color: var(--sidebarBackgroundColor);
+	background-color: var(--sidebar-bg);
 	overflow-x: hidden;
-	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadowColor);
+	box-shadow: 0 0.5rem 1rem 0.1rem var(--shadow-color);
+	transition: width 0.2s ease-in-out;
 
 	a {
 		display: block;
-		color: var(--buttonColor);
+		color: var(--nav-txt-color);
 		padding: 10%;
 		transition: background-color 0.15s ease-in;
 
 		&:hover {
-			background-color: var(--sidebarButtonHoverColor);
+			background-color: var(--sidebar-btn-hover);
 		}
 	}
 
@@ -110,12 +111,12 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-	.dropdownContent {
+	.dropdown-content {
 		width: 100%;
 	}
 
 	nav,
-	.dropdownContent {
+	.dropdown-content {
 		a {
 			text-align: center;
 			padding: 5%;

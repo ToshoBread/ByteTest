@@ -1,6 +1,6 @@
 <?php
 require "../components/components.php";
-require "../src/settings_cardContent.php";
+require "../src/profile_cardContent.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,21 +10,20 @@ require "../src/settings_cardContent.php";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/base.css?version=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="../styles/accountSettings.css?version=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="../styles/profile.css?version=<?php echo time(); ?>" />
     <link rel="icon" type="image/png" href="../imgs/byteTestLogoWhiteMin.png" />
     <title>ByteTest</title>
 </head>
 
 <body>
     <?php echo renderComponent(new NavigationComponent()); ?>
-    <div class="indexMainWrapper">
+    <div class="mainWrapper">
         <main>
-            <?php echo renderComponent(new OuterCardComponent($settings_OuterCardContent)); ?>
+            <?php echo renderComponent(new OuterCardComponent($profile_OuterCardContent)); ?>
         </main>
         <?php echo renderComponent(new FooterComponent); ?>
     </div>
 </body>
-<script src="../scripts/settings.js"></script>
 <script src="https://kit.fontawesome.com/1186408caf.js" crossorigin="anonymous"></script>
 
 </html>

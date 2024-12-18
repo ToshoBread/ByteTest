@@ -8,7 +8,7 @@
 	row-gap: 1rem;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 1rem;
+	margin: 0 1rem 1rem;
 
 	h3 {
 		font-size: var(--font-l);
@@ -24,7 +24,10 @@
 .pic-mask {
 	height: auto;
 	width: clamp(4rem, 1.436rem + 10.256vw, 8rem);
+	border-radius: 50%;
 	overflow: hidden;
+	background-color: var(--main-bg);
+	box-shadow: inset var(--shadow-large);
 
 	img {
 		width: 100%;
@@ -68,36 +71,72 @@
 }
 
 .dashboard-items {
-	background-color: black;
+	background-color: var(--dashboard-items-bg);
 	border-radius: 1rem;
+	padding: 1.5rem;
+
+	> p:first-child {
+		font-size: var(--font-m);
+	}
 }
 
 .overview {
-	min-height: 12rem;
+	min-height: 10rem;
 }
 
+.ranking {
+	background-color: var(--dashboard-ranking-bg);
+}
+
+.score,
+.follower {
+	p:last-child {
+		font-size: var(--font-xxl);
+		margin-top: 1.5rem;
+	}
+}
+
+.top-languages {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-top: 1rem;
+	font-size: var(--font-m);
+
+	img {
+		width: var(--font-l);
+		margin-right: 0.5rem;
+		transform: translateY(0.3rem);
+	}
+}
+
+.points {
+	color: var(--points-txt-color);
+}
 @media (width > 768px) {
 	.dashboard-grid {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(min(2rem, 100%), 1fr));
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: repeat(6, 1fr);
 	}
 
 	.overview {
-		grid-column: span 2;
+		grid-row: 1/4;
 	}
 
 	.ranking {
-		grid-row: 2/4;
-		grid-column: 1/3;
+		grid-row: 4/7;
+	}
+
+	.score {
+		grid-row: 1/3;
 	}
 
 	.language {
-		grid-column: 3;
 		grid-row: 3/5;
 	}
 
 	.follower {
-		grid-column: 3;
 		grid-row: 5/7;
 	}
 }

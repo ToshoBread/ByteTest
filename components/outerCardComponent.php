@@ -1,7 +1,7 @@
 <style>
 	.outer-card {
 		padding: 0.5rem;
-		margin: 5% 10%;
+		margin: var(--outer-card-margins);
 		min-height: 30%;
 		color: var(--card-txt-color);
 		background: var(--outer-card-bg);

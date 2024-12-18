@@ -32,6 +32,10 @@
 		font-size: var(--font-m);
 	}
 
+	label {
+		font-size: var(--font-s);
+	}
+
 	button {
 		font-size: var(--font-m);
 		margin-top: 4rem;
@@ -49,6 +53,11 @@
 
 	h3 {
 		margin-bottom: 0.5rem;
+		font-size: var(--font-m);
+	}
+
+	p {
+		font-size: var(--font-s);
 	}
 }
 

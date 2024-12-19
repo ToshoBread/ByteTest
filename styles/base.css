@@ -7,6 +7,7 @@
 	/*~ Login & Registration Pages------------------------- */
 	--form-bg-img: url("../imgs/background.png");
 	--form-bg: rgb(237, 237, 237);
+	--input-color: rgb(102, 102, 102);
 
 	/*~ Home & Practice Pages------------------------- */
 	--exam-btn-bg: rgb(116, 116, 116);
@@ -33,7 +34,7 @@
 	--sidebar-btn-hover: rgb(62, 62, 62);
 
 	/*? Card Component------------------------- */
-	--outer-card-margins: 5% 10%;
+	--outer-card-margins: 5% 15%;
 	--outer-card-bg: linear-gradient(
 		90deg,
 		rgba(39, 49, 61, 1) 0%,

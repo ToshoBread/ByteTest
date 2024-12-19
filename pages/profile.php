@@ -1,7 +1,7 @@
 <?php
 require "../components/components.php";
-require "../src/settings_cardContent.php";
-require "../src/profile_cardContent.php";
+require "../src/settings_Content.php";
+require "../src/profile_Content.php";
 ?>
 
 <!DOCTYPE html>

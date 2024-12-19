@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/base.css" />
-    <link rel="stylesheet" href="../styles/form.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/base.css?version=<?= time(); ?>" />
+    <link rel="stylesheet" href="../styles/form.css?version=<?= time(); ?>" />
+    <link rel="stylesheet" href="../styles/login.css?version=<?= time(); ?>" />
     <link rel="icon" type="image/png" href="../imgs/byteTestLogoWhiteMin.png" />
     <title>ByteTest</title>
 </head>
 
 <body>
-    <img src="../imgs/logoFullWhite.png" id="logoFull" alt="ByteTestLogoAndTagline" />
-    <div id="container">
-        <img src="../imgs/byteTestLogo.png" alt="ByteTest Logo" id="logo" />
+    <img src="../imgs/logoFullWhite.png" class="logo-full" alt="ByteTest Logo & Tagline" />
+    <div class="container">
+        <img src="../imgs/byteTestLogo.png" alt="ByteTest Logo" class="logo" />
         <h1>Login</h1>
         <?php
         if (isset($_POST["login"])) {
@@ -26,21 +26,21 @@
             echo "Hello {$email}";
         }
         ?>
-        <form action="index.php" method="post" id="loginForm" autocomplete="off">
+        <form action="index.php" method="post" class="login-form" autocomplete="off">
             <input type="text" name="username" placeholder="Username or Email" id="email" required />
             <input type="password" name="password" placeholder="Password" id="passsword" required />
-            <div id="extraWrapper">
-                <input type="checkbox" name="rememberMe" value="remembered" id="rememberMe" />
-                <label for="rememberMe">Remember me</label>
+            <div class="extra-wrapper">
+                <input type="checkbox" name="rememberMe" value="remembered" id="remember-me" />
+                <label for="remember-me">Remember me</label>
                 <a href="#">Forgot password</a>
             </div>
-            <input type="submit" name="login" value="Log In" id="submit" />
-            <div id="divideWrapper">
+            <input type="submit" name="login" value="Log In" class="submit" />
+            <div class="divide-wrapper">
                 <hr />
                 <p>OR</p>
                 <hr />
             </div>
-            <div id="socialsWrapper">
+            <div class="socials-wrapper">
                 <button class="socials" onclick="googleSignIn()">
                     <img src="../imgs/facebookLogo.png" alt="Facebook Logo" />
                 </button>

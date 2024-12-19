@@ -26,6 +26,10 @@
 	--settings-cancel-btn: rgb(130, 23, 23);
 	--settings-cancel-hover: rgb(72, 7, 7);
 
+	/*~ User Support Page-------------------------  */
+	--support-card-bg: rgb(26, 26, 26);
+	--support-txt-color: rgb(240, 240, 240);
+
 	/*? Navigation Component------------------------- */
 	--topnav-bg: rgb(56, 91, 120);
 	--nav-txt-color: rgb(240, 240, 240);

@@ -1,7 +1,7 @@
 <?php
 require "../components/components.php";
-require "../src/practice_Content.php";
-?>
+include "../server/content.php"
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,14 +32,14 @@ require "../src/practice_Content.php";
             <option value='python'>Python</option>
             <option value='rust'>Rust</option>
           </select>
-          <button type='button'>Practice</button>
+          <button type='button'><a href='exercise.php'>Practice</a></button>
         </form>
         "
                 )) .
                 "
           <div class='desc-wrapper'>
           <h3>Description:</h3>
-          <p>{$examDescription}</p>
+          <p>{$practiceDescription}</p>
           </div>
           <div class='desc-wrapper'>
           <p>{$extraDescription}</p>

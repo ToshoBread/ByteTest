@@ -60,3 +60,13 @@ class FooterComponent
         return ob_get_clean();
     }
 }
+
+class EditorComponent
+{
+    function render()
+    {
+        ob_start();
+        require "editorComponent.php";
+        return ob_get_clean();
+    }
+}

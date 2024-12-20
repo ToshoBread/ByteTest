@@ -53,6 +53,13 @@
 	--footer-txt-color: rgb(240, 240, 240);
 	--footer-btn-hover: rgb(62, 62, 62);
 
+	/*? Editor Component------------------------- */
+	--run-txt-color: rgb(240, 240, 240);
+	--run-btn-bg: rgb(63, 156, 77);
+	--run-btn-hover: rgb(42, 105, 51);
+	--editor-output-txt-color: rgb(0, 0, 0);
+	--editor-output-bg: rgb(240, 240, 240);
+
 	/** Font Sizes */
 	/* viewport: 400px -> 1024px*/
 	--font-s: clamp(0.8rem, 0.672rem + 0.513vw, 1rem);

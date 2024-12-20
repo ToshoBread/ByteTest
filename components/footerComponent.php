@@ -25,9 +25,8 @@
 			<?php echo date("Y") ?>
 			ByteTest</strong>
 	</p>
-	<a href="#">Terms</a>
-	<a href="#">Privacy</a>
-	<a href="#">About</a>
-	<a href="#">Contact</a>
-	<a href="../temp/contentTesting.html">Testing</a>
+	<a href="404.html">Terms</a>
+	<a href="404.html">Privacy</a>
+	<a href="404.html">About</a>
+	<a href="404.html">Contact</a>
 </footer>

@@ -1,6 +1,6 @@
 <?php
 require "../components/components.php";
-require "../src/settings_Content.php";
+require "../server/content.php";
 ?>
 
 <!DOCTYPE html>

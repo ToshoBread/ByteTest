@@ -75,8 +75,9 @@
 	border-radius: 1rem;
 	padding: 1.5rem;
 
-	> p:first-child {
+	p {
 		font-size: var(--font-m);
+		margin-bottom: 0.5rem;
 	}
 }
 

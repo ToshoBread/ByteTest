@@ -1,6 +1,5 @@
 <?php
 require "../components/components.php";
-require "../src/home_Content.php";
 ?>
 
 <!DOCTYPE html>

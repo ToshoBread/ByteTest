@@ -1,7 +1,8 @@
 <?php
 require "../components/components.php";
-require "../src/home_Content.php";
-?>
+include "../server/content.php"
+
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@ require "../src/home_Content.php";
             <option value='rust'>Rust</option>
           </select>
           <label for='choose-language'>Time Limit: {$timeLimit}</label>
-          <button type='button'>Take Exam</button>
+          <button type='button'><a href='exam.php'>Take Exam</a></button>
         </form>
         "
         )) .

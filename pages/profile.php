@@ -1,7 +1,7 @@
 <?php
 require "../components/components.php";
-require "../src/settings_Content.php";
-require "../src/profile_Content.php";
+require "../server/content.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +43,7 @@ require "../src/profile_Content.php";
             <div class='dashboard-grid'>
                 <div class='dashboard-items overview'>
                     <p>Overview</p>
+                    <p>{$skills}</p>
                 </div>
                 <div class='dashboard-items ranking'>
                     <p>Rankings</p>

@@ -8,6 +8,8 @@
 	--form-bg-img: url("../imgs/background.png");
 	--form-bg: rgb(237, 237, 237);
 	--input-color: rgb(102, 102, 102);
+	--input-valid-color: rgb(19, 210, 19);
+	--input-invalid-color: rgb(226, 25, 25);
 
 	/*~ Home & Practice Pages------------------------- */
 	--exam-btn-bg: rgb(116, 116, 116);

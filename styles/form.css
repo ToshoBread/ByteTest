@@ -13,6 +13,11 @@ body::before {
 	backdrop-filter: blur(10px);
 }
 
+.logo {
+	width: 10rem;
+	margin: 0 auto 1rem;
+}
+
 .container {
 	z-index: 1;
 	min-height: 100%;
@@ -37,21 +42,31 @@ input {
 	padding: 1rem;
 	border: none;
 	box-shadow: inset var(--shadow-small);
+	border: 3px solid transparent;
+	outline: none;
 	color: var(--input-color);
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input:user-valid {
+	border-color: var(--input-valid-color);
+}
+
+input:user-invalid {
+	border-color: var(--input-invalid-color);
+}
+
+input[type="checkbox"] {
 	box-shadow: none;
 }
 
 input[type="submit"] {
+	border: none;
+	box-shadow: var(--shadow-small);
 	margin: auto;
 	padding: 0.8rem 30%;
 }
 input[type="submit"]:hover {
 	cursor: pointer;
-	box-shadow: var(--shadow-small);
 }
 
 @media (width <= 768px) {

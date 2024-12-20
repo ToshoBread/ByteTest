@@ -16,24 +16,15 @@
     <div class="container">
         <img src="../imgs/byteTestLogo.png" alt="ByteTest Logo" class="logo" />
         <h1>Login</h1>
-        <?php
-        if (isset($_POST["login"])) {
-            $email = filter_input(
-                INPUT_POST,
-                "email",
-                FILTER_SANITIZE_SPECIAL_CHARS
-            );
-            echo "Hello {$email}";
-        }
-        ?>
-        <form action="index.php" method="post" class="login-form" autocomplete="off">
-            <input type="text" name="username" placeholder="Username or Email" id="email" required />
-            <input type="password" name="password" placeholder="Password" id="passsword" required />
+        <form method="post" class="login-form" autocomplete="off">
+            <input type="text" name="loginInput" placeholder="Username or Email" id="loginInput" required />
+            <input type="password" name="password" placeholder="Password" id="password" required />
             <div class="extra-wrapper">
                 <input type="checkbox" name="rememberMe" value="remembered" id="remember-me" />
                 <label for="remember-me">Remember me</label>
-                <a href="#">Forgot password</a>
+                <a href="#">Forgot password?</a>
             </div>
+            <div class="message"></div>
             <input type="submit" name="login" value="Log In" class="submit" />
             <div class="divide-wrapper">
                 <hr />
@@ -55,6 +46,6 @@
         <p>Don't have an account? <a href="register.php">Click Here</a></p>
     </div>
 </body>
-<script src="../scripts/login.js"></script>
+<script src="../scripts/login.js?version=<?= time(); ?>"></script>
 
 </html>
